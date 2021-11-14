@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "zotifxxh_savelife",
+    "password": "savelife@123",
+    "database": "zotifxxh_savelife",
+    "host": "103.212.121.53",
+    "port":3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "zotifxxh_savelife",
+    "password": "savelife@123",
+    "database": "zotifxxh_savelife",
+    "host": "103.212.121.53",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "zotifxxh_savelife",
+    "password": "savelife@123",
+    "database": "zotifxxh_savelife",
+    "host": "103.212.121.53",
+    "dialect": "mysql"
+  }
+}
