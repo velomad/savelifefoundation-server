@@ -35,8 +35,22 @@ app.get("/", (req, res) => {
 });
 
 // routes
-app.use(`/api/v1/auth`, require("./src/routes/auth"));
-app.use(`/api/v1/cake`, require("./src/routes/cake"));
+app.use(`/api/v1/case`, require("./src/routes/case"));
+
+if (process.env.NODE_ENV === "production") {
+	app.use("/dashboard", express.static(path.join(__dirname, "dashboardbuild")));
+
+	app.use(express.static(path.join(__dirname, "build")));
+
+	app.get("/dashboard/*", (req, res) => {
+		res.sendFile(path.join(__dirname, "dashboardbuild", "index.html"));
+	});
+
+	app.get("/*", (req, res) => {
+		res.sendFile(path.join(__dirname, "build", "index.html"));
+	});
+}
+
 
 // error handling
 app.use(notFound);
@@ -44,6 +58,9 @@ app.use(notFound);
 app.use(errorHandling);
 
 const port = process.env.PORT || 5000;
+
+
+
 
 app.listen(port, () => {
   console.log(`Listning at port : ${port}`);
