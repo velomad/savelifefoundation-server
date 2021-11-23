@@ -14,6 +14,15 @@ module.exports = {
       content: {
         type: Sequelize.STRING
       },
+      disease: {
+        type: Sequelize.STRING
+      },
+      current: {
+        type: Sequelize.STRING
+      },
+      rate: {
+        type: Sequelize.STRING
+      },
       donationRequirement: {
         type: Sequelize.INTEGER
       },

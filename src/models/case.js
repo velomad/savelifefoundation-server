@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
   Case.init({
     title: DataTypes.STRING,
     content: DataTypes.STRING,
+    disease: DataTypes.STRING,
+    rate: DataTypes.STRING,
+    current: DataTypes.STRING,
     donationRequirement: DataTypes.INTEGER,
     needersName: DataTypes.STRING,
     imageUrl:DataTypes.STRING
